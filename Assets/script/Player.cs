@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             run = 2;
-            Debug.Log("2");
         }
         else
         {
