@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float HorizontInput;
-    float VerticalInput;
-    Rigidbody2D Rig;
-    int run;
+    private float HorizontInput;
+    private float VerticalInput;
+    private int run;
+    private Vector3 startPosition = new Vector3(-20, 0, 0);
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Rig = GetComponent<Rigidbody2D>();
-        run = 1;
+        transform.position = startPosition;
     }
 
     // Update is called once per frame
@@ -24,11 +23,11 @@ public class Player : MonoBehaviour
         VerticalInput = Input.GetAxis("Vertical");
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            run = 2;
+            run = 12;
         }
         else
         {
-            run = 1;
+            run = 10;
         }
         
             
@@ -36,9 +35,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Physics.OverlapSphere(ground.position, 0.01f, LM).Length == 5 &&
-        Rig.velocity = new Vector2(HorizontInput * 2.5f * run, Rig.velocity.y) ;
-        Rig.velocity = new Vector2(Rig.velocity.x, VerticalInput * 2.5f * run) ;
+        transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
 
     }
 
