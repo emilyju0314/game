@@ -37,13 +37,15 @@ public class 劇情間player : MonoBehaviour
     {
         if (!ani)
             transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
-        else if(transform.position.y<11)
-            transform.position += new Vector3(0, Time.deltaTime);
+        else if (transform.position.y < 11)
+            transform.position += new Vector3(-transform.position.x * Time.deltaTime, Time.deltaTime);
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ani = true;
+        if (collision.tag != "door")
+            ani = true;
+        FixedUpdate();
     }
 
 }
