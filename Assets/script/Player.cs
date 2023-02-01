@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private float HorizontInput;
     private float VerticalInput;
     private int run;
-    private Vector3 startPosition = new Vector3(-20, 0, 0);
+    private Vector3 startPosition = new Vector3(-15, 0, 0);
 
 
     // Start is called before the first frame update
