@@ -360,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbd0ac9752b8d64ea60c4fcd7c9121c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: -25, y: 0, z: 0}
 --- !u!61 &562665360
 BoxCollider2D:
   m_ObjectHideFlags: 0

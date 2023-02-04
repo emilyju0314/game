@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbd0ac9752b8d64ea60c4fcd7c9121c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: 0, y: -8, z: 0}
 --- !u!114 &132556966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6767372386729451575, guid: e018f99390a547949861b358160c3d98, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9168376834515848917, guid: e018f99390a547949861b358160c3d98, type: 3}
       propertyPath: m_Name
       value: monster
@@ -825,11 +830,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9168376834515848919, guid: e018f99390a547949861b358160c3d98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9168376834515848919, guid: e018f99390a547949861b358160c3d98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 9168376834515848919, guid: e018f99390a547949861b358160c3d98, type: 3}
       propertyPath: m_LocalPosition.z

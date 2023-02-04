@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonsterBehaviour : MonoBehaviour
 {
     private float monsterSpeed = 9.0f;
-    private Vector3 startPosition = new Vector3(0, 0, 0);
+    public Vector3 startPosition;//在unity設置，所有房間共用同個script
     private Vector3 playerPos; 
     // Start is called before the first frame update
     void Start()
