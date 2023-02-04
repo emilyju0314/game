@@ -43,7 +43,7 @@ public class 劇情間player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "door")
+        if (collision.gameObject == GameObject.Find("anime"))
             ani = true;
         FixedUpdate();
     }
