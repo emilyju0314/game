@@ -8,12 +8,20 @@ public class Player : MonoBehaviour
     private float VerticalInput;
     private int run;
     private Vector3 startPosition = new Vector3(-15, 0, 0);
+    public static Vector3 outPos;//出房間時站在門前
+
     Animator anime;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = startPosition;
+        Debug.Log(outPos);
+        if (outPos == new Vector3())
+            transform.position = startPosition;
+        else
+            transform.position = outPos;
+
+
         anime = GetComponent<Animator>();
     }
 
@@ -38,8 +46,8 @@ public class Player : MonoBehaviour
         {
             run = 10;
         }
-        
-            
+
+
     }
 
     void FixedUpdate()
