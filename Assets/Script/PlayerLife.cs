@@ -25,8 +25,7 @@ public class PlayerLife : MonoBehaviour
     //private void OnTriggerStay2D(Collider2D collision)
     private void OnCollisionStay2D(Collision2D collision)
     {
-<<<<<<< HEAD
-        if (collision.tag == "Monster")
+        if (collision.collider.tag == "Monster")
         {
             HpManagement(-1);
         }

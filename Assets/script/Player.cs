@@ -51,21 +51,12 @@ public class Player : MonoBehaviour
         {
             run = 10;
         }
-<<<<<<< HEAD
+
         if (!PlayerLifeSC.gameover)
         {
             //player ²¾°Ê
             transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
         }
-=======
-
-
-    }
-
-    void FixedUpdate()
-    {
-        transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
->>>>>>> 1c14bff7a62e263f59903efb5fc195b53518827d
 
     }
 
