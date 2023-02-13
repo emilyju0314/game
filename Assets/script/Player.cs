@@ -8,13 +8,21 @@ public class Player : MonoBehaviour
     private float VerticalInput;
     private int run;
     private Vector3 startPosition = new Vector3(-15, 0, 0);
+    public static Vector3 outPos;//出房間時站在門前
+
     Animator anime;
     private PlayerLife PlayerLifeSC;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = startPosition;
+        Debug.Log(outPos);
+        if (outPos == new Vector3())
+            transform.position = startPosition;
+        else
+            transform.position = outPos;
+
+
         anime = GetComponent<Animator>();
         PlayerLifeSC = GameObject.Find("player").GetComponent<PlayerLife>();
     }
@@ -43,11 +51,21 @@ public class Player : MonoBehaviour
         {
             run = 10;
         }
+<<<<<<< HEAD
         if (!PlayerLifeSC.gameover)
         {
             //player 移動
             transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
         }
+=======
+
+
+    }
+
+    void FixedUpdate()
+    {
+        transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
+>>>>>>> 1c14bff7a62e263f59903efb5fc195b53518827d
 
     }
 

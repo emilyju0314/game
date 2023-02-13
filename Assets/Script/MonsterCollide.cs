@@ -17,13 +17,19 @@ public class MonsterCollide : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision) //避免怪物碰不到牆壁的問題
     {
-        if (collision.tag == "Player")
+        if (collision.collider.tag == "Player")
         {
             transform.Translate(Vector2.left * MonsterGoBack);
         }
     }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player")
+    //    {
+    //        transform.Translate(Vector2.left * MonsterGoBack);
+    //    }
+    //}
 
 }
