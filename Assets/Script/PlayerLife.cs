@@ -8,6 +8,7 @@ public class PlayerLife : MonoBehaviour
     public GameObject monster;
     public GameObject life;
     public int Hp = 3;
+    public bool gameover;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,6 @@ public class PlayerLife : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("here");
         if (collision.tag == "Monster")
         {
             HpManagement(-1);
@@ -36,10 +36,12 @@ public class PlayerLife : MonoBehaviour
         if (Hp == 0)
         {
             Debug.Log("game over");
+            gameover = true;
         }
         if (Hp <= 0)
         {
             Hp = 0;
+            gameover = true;
         }
         life.transform.localScale = new Vector3(Hp, life.transform.localScale.y, life.transform.localScale.z);
     }

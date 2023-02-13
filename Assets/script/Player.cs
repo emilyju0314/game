@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     private int run;
     private Vector3 startPosition = new Vector3(-15, 0, 0);
     Animator anime;
+    private PlayerLife PlayerLifeSC;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = startPosition;
         anime = GetComponent<Animator>();
+        PlayerLifeSC = GameObject.Find("player").GetComponent<PlayerLife>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,10 @@ public class Player : MonoBehaviour
         HorizontInput = Input.GetAxis("Horizontal");
         VerticalInput = Input.GetAxis("Vertical");
 
-        anime.SetFloat("x", HorizontInput);//判定player奔跑方向
+        if (!PlayerLifeSC.gameover)
+        {
+            anime.SetFloat("x", HorizontInput);//判定player奔跑方向
+        }
 
         if (HorizontInput == 0)
             anime.SetBool("x0", true);//判定player朝向
@@ -38,15 +43,14 @@ public class Player : MonoBehaviour
         {
             run = 10;
         }
-        
-            
-    }
-
-    void FixedUpdate()
-    {
-        transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
+        if (!PlayerLifeSC.gameover)
+        {
+            //player 移動
+            transform.position += new Vector3(HorizontInput * run * Time.deltaTime, VerticalInput * run * Time.deltaTime);
+        }
 
     }
+
 
 
 }

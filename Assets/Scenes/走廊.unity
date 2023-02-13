@@ -1031,18 +1031,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1714522437101315190, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1714522437101315190, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1714522437101315190, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1714522437101315190, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1082,10 +1070,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1714522437101315190, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4085099319146856761, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
       propertyPath: m_Name
       value: life
@@ -1094,14 +1078,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1441804653}
-    - target: {fileID: 5941775652677638651, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
-      propertyPath: offset.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5941775652677638651, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
-      propertyPath: offset.y
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bc77f848594e0c41a39f66e9a1fc5a8, type: 3}
 --- !u!1 &1730631617 stripped
