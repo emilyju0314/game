@@ -6,6 +6,8 @@ TagManager:
   tags:
   - door
   - Monster
+  - Floor
+  - Obstacle
   layers:
   - Default
   - TransparentFX

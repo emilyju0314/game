@@ -23,6 +23,11 @@ public class MonsterCollide : MonoBehaviour
         {
             transform.Translate(Vector2.left * MonsterGoBack);
         }
+
+        if(collision.collider.tag == "Obstacle")
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
     //private void OnTriggerStay2D(Collider2D collision)
     //{
