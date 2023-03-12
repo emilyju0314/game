@@ -5,15 +5,16 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
 
-    public GameObject monster;
-    public GameObject life;
+    private GameObject monster;
+    private GameObject life;
     public int Hp = 3;
     public bool gameover;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        monster = GameObject.Find("monster");
+        life = GameObject.Find("life");
     }
 
     // Update is called once per frame
